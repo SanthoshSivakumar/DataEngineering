@@ -1,0 +1,24 @@
+{
+	"name": "customerdetailscsvfiles",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "LS_Blob",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "data_7934d35c-cdcc-4cc4-92d4-77a1fbe2b583_122f0cb8-0596-4148-8934-e64739d06766.txt",
+				"folderPath": "customerdetails",
+				"container": "day2output"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
