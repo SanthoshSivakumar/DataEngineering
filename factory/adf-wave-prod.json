@@ -1,0 +1,9 @@
+{
+	"name": "adf-wave-prod",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "32de4725-1368-4885-b10e-a9ea6b86a2f1",
+		"tenantId": "2800c0a0-70e9-49be-8733-faeaa6aced99"
+	}
+}
