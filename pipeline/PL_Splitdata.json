@@ -108,13 +108,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "Excel2",
+						"referenceName": "unorderedorderfiles",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "Orderxlsxfiles",
+						"referenceName": "DelimitedText7",
 						"type": "DatasetReference"
 					}
 				]

@@ -1,19 +1,22 @@
 {
-	"name": "unorderedorderfiles",
+	"name": "orderxlsxfile",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "LS_Blob",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
-		"type": "Excel",
+		"type": "DelimitedText",
 		"typeProperties": {
-			"sheetName": "Sheet1",
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"folderPath": "1",
-				"container": "day2input"
-			}
+				"folderPath": "orderdetails",
+				"container": "day2output"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
 		},
 		"schema": []
 	}
