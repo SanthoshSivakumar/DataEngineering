@@ -1,9 +1,9 @@
 {
-	"name": "dim_product",
+	"name": "PL_FT_Transaction",
 	"properties": {
 		"activities": [
 			{
-				"name": "factProductdetails",
+				"name": "Data flow1",
 				"type": "ExecuteDataFlow",
 				"dependsOn": [],
 				"policy": {
@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "DL_FT_Product",
+						"referenceName": "DF_FT_Transaction",
 						"type": "DataFlowReference"
 					},
 					"compute": {

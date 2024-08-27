@@ -1,9 +1,9 @@
 {
-	"name": "dim_product",
+	"name": "PL_dim_Customer",
 	"properties": {
 		"activities": [
 			{
-				"name": "factProductdetails",
+				"name": "Data flow1",
 				"type": "ExecuteDataFlow",
 				"dependsOn": [],
 				"policy": {
@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"dataflow": {
-						"referenceName": "DL_FT_Product",
+						"referenceName": "DL_dim_customer",
 						"type": "DataFlowReference"
 					},
 					"compute": {
