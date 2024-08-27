@@ -9,7 +9,7 @@
 		"type": "AzureSqlTable",
 		"schema": [],
 		"typeProperties": {
-			"schema": "fact",
+			"schema": "dim",
 			"table": "Productdetails"
 		}
 	}

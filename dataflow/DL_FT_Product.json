@@ -1,5 +1,5 @@
 {
-	"name": "dataflow3",
+	"name": "DL_FT_Product",
 	"properties": {
 		"type": "MappingDataFlow",
 		"typeProperties": {
