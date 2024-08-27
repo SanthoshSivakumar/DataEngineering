@@ -9,8 +9,8 @@
 		"type": "AzureSqlTable",
 		"schema": [],
 		"typeProperties": {
-			"schema": "Fact",
-			"table": "Transaction"
+			"schema": "raw",
+			"table": "customerdetails"
 		}
 	}
 }
