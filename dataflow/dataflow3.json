@@ -1,5 +1,5 @@
 {
-	"name": "DF_order",
+	"name": "dataflow3",
 	"properties": {
 		"type": "MappingDataFlow",
 		"typeProperties": {
@@ -9,8 +9,7 @@
 						"referenceName": "AzureSqlTable5",
 						"type": "DatasetReference"
 					},
-					"name": "ordertable",
-					"description": "Import data from order table"
+					"name": "source1"
 				}
 			],
 			"sinks": [
@@ -24,15 +23,6 @@
 			],
 			"transformations": [
 				{
-					"name": "split1"
-				},
-				{
-					"name": "ActualPrice"
-				},
-				{
-					"name": "aggregate1"
-				},
-				{
 					"name": "select1"
 				}
 			],
@@ -44,32 +34,16 @@
 				"          Quantity as integer,",
 				"          OrderTimestamp as date,",
 				"          Price as integer,",
-				"          CustomerID as string",
+				"          CustomerID as string,",
+				"          Actualprice as integer",
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     isolationLevel: 'READ_UNCOMMITTED',",
-				"     format: 'table') ~> ordertable",
-				"ordertable split(toString(OrderTimestamp) != '',",
-				"     disjoint: false) ~> split1@(withoutnull, withnull)",
-				"split1@withoutnull derive(Actualprice = toInteger(Price/Quantity)) ~> ActualPrice",
-				"ActualPrice aggregate(groupBy(OrderID,",
+				"     format: 'table') ~> source1",
+				"source1 select(mapColumn(",
 				"          ProductID,",
 				"          ProductName,",
-				"          Quantity,",
-				"          OrderTimestamp,",
-				"          Price,",
-				"          CustomerID,",
-				"          Actualprice),",
-				"     count = count(OrderID)) ~> aggregate1",
-				"aggregate1 select(mapColumn(",
-				"          OrderID,",
-				"          ProductID,",
-				"          ProductName,",
-				"          Quantity,",
-				"          OrderTimestamp,",
-				"          Price,",
-				"          CustomerID,",
 				"          Actualprice",
 				"     ),",
 				"     skipDuplicateMapInputs: true,",
@@ -80,7 +54,6 @@
 				"     insertable:true,",
 				"     updateable:false,",
 				"     upsertable:false,",
-				"     recreate:true,",
 				"     format: 'table',",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",

@@ -1,5 +1,5 @@
 {
-	"name": "AzureSqlTable4",
+	"name": "AzureSqlTable5",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureSqlDatabase1",
@@ -9,8 +9,8 @@
 		"type": "AzureSqlTable",
 		"schema": [],
 		"typeProperties": {
-			"schema": "fact",
-			"table": "Productdetails"
+			"schema": "prep",
+			"table": "prepordersdetails"
 		}
 	}
 }
